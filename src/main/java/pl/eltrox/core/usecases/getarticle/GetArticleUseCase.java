@@ -2,12 +2,13 @@ package pl.eltrox.core.usecases.getarticle;
 
 import pl.eltrox.core.entities.Article;
 import pl.eltrox.core.repositories.ArticleRepository;
+import pl.eltrox.core.usecases.UseCase;
 
 /**
  * @author Daniel Zawlocki
  * @date 2018/02/19
  */
-public class GetArticleUseCase implements UseCase <GetArticleRequest, GetArticleResponse> {
+public class GetArticleUseCase implements UseCase<GetArticleRequest, GetArticleResponse> {
     private ArticleRepository articleRepository;
 
     public GetArticleUseCase(ArticleRepository articleRepository) {

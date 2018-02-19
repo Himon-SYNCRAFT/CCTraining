@@ -1,6 +1,7 @@
 package pl.eltrox.core.usecases.getarticle;
 
 import pl.eltrox.core.entities.Article;
+import pl.eltrox.core.usecases.Response;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ import java.util.List;
  * @author Daniel Zawlocki
  * @date 2018/02/19
  */
-public class GetArticleResponse {
+public class GetArticleResponse implements Response <Article> {
     private Article data;
     private List<String> errors;
 
@@ -26,5 +27,10 @@ public class GetArticleResponse {
 
     public void setErrors(List<String> errors) {
         this.errors = errors;
+    }
+
+    @Override
+    public void addError(String error) {
+        errors.add(error);
     }
 }

@@ -4,11 +4,9 @@ package pl.eltrox.core.entities;
  * @author Daniel Zawlocki
  * @date 2018/02/19
  */
-public class Article {
+public class Category {
     private Long id;
     private String name;
-    private String sku;
-    private Category category;
 
     public Long getId() {
         return id;
@@ -24,21 +22,5 @@ public class Article {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSku() {
-        return sku;
-    }
-
-    public void setSku(String sku) {
-        this.sku = sku;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 }
